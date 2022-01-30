@@ -1,0 +1,126 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+/* ==========================Making variabe==================================== */
+.root{
+  --header-height:3rem;
+  --h2-font-size:2rem;
+  --big-font-size:3rem
+  --smaller-font-size: .75rem;
+  --normal-font-size: .938rem;
+}
+
+.bd-grid {
+  /* max-width: 1024px; */
+  display: grid;
+  margin-left: var(--mb-2);
+  margin-right: var(--mb-2);
+}
+.header-title{
+  display: fixed;
+  width: 100%;
+  box-shadow: 0px 4px 3px -5px grey;
+  
+}
+.nav-bar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-height);
+  /* margin-left: 16rem;
+  margin-right: 16rem; */
+
+}
+.logo-web>h2{
+  font-size:2rem;
+  /* margin-right: 10%; */
+}
+.nav-element-list{
+  display: fixed;
+}
+.nav-item{
+  display: inline;
+  font-size: 1.3rem;
+}
+.nav-item-link{
+  color: black;
+  padding: 10px;
+  /* font-size: 1rem; */
+}
+.menu-bar{
+  position: relative;
+  display: none;
+}
+.menu-btn {
+  background-color: white;
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-content {
+  display: none;
+  position: absolute;
+  background-color: black;
+  min-width: 160px;
+  right: 0;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.menu-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.menu-content a:hover {background-color: gray}
+.menu-bar:hover .menu-btn{
+  background-color: white;
+}
+.menu-btn{
+  visibility: hidden;
+  /* display: none; */
+}
+i{
+  font-size: 30px;
+}
+@media(max-width:874px){
+  .nav-element{
+      display: none;
+  }
+  .menu-btn{
+      visibility: visible;
+  }
+  .menu-content{
+      content-visibility: visible;
+      margin-right: 5%;
+  }
+  .menu-bar:hover .menu-content{
+      display: block;
+  }
+  .menu-bar{
+      position: relative;
+      display: inline-block;
+  }
+  .nav-bar{
+      margin-left: 0;
+      margin-right: 0;
+
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+a{
+  text-decoration: none;
+}
+ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.nav-item:hover a{
+  text-decoration: underline;
+}
